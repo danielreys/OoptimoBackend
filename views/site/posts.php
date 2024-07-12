@@ -2,6 +2,8 @@
 
 /** @var yii\web\View $this */
 
+use yii\helpers\Html;
+
 $this->title = 'Test 1 — ooptimo';
 ?>
 <div class="site-test1">
@@ -24,10 +26,22 @@ $this->title = 'Test 1 — ooptimo';
     </div>
 
 	<hr>
-	
+
 	<div class="posts-list">
+        <h2>Posts</h2>
 		<div class="row mt-4">
-			<h2>Posts</h2>
+            <?php if (!empty($apiPosts)): ?>
+                <?php foreach ($apiPosts as $post): ?>
+                    <div class="post" id="<?= Html::encode($post->getId())?>" userId="<?= Html::encode($post->getUserId()) ?>">
+                        <h2><?= Html::encode($post->getTitle()) ?></h2>
+                        <p><?= Html::encode($post->getBody()) ?></p>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No posts available.</p>
+            <?php endif; ?>
 		</div>
 	</div>
+
+
 </div>

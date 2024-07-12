@@ -14,7 +14,7 @@ $this->title = 'ooptimo';
 	            <p>Resuelve los siguientes ejercicios y mandanos un enlace a tu repositorio o un zip con el proyecto a <a href="mailto:asunyer@ooptimo.com">asunyer@ooptimo.com</a>.</p>
 	            
 	            <ul>
-		            <li><a href="<?=Url::to(['site/test1'])?>">Test 1 — Consumir API</a></li>
+		            <li><a href="<?=Url::to(['site/posts'])?>">Test 1 — Consumir API</a></li>
 	            </ul>
 
 	            <p>Si tienes cualquier duda o problema puedes enviar un email con tus preguntas a <a href="mailto:asunyer@ooptimo.com">asunyer@ooptimo.com</a> e intentaremos ayudarte lo antes posible.</p>
